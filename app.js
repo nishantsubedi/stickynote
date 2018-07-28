@@ -17,5 +17,8 @@ app.set('view engine', 'ejs');
 app.use(bodyParser()); // pull information from html in POST
 app.use('/public',express.static(path.join(__dirname, 'public')));
 
+app.get('/', (req, res) => {
+    res.render('index');
+})
 
 app.listen(process.env.PORT || 3000, () => console.log('Example app listening on port 3000!'));

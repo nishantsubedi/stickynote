@@ -12,6 +12,9 @@ var noteSchema = new Schema({
     },
     updated: {
          type: Date, default: Date.now 
+    },
+    completed: {
+        type: Boolean, default: false
     }
 
 });
